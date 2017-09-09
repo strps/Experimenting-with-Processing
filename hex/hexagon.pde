@@ -17,12 +17,12 @@ class hexagon {
     int r = (c >> 16) & 0xFF;  // Faster way of getting red(argb)
     int g = (c >> 8) & 0xFF;   // Faster way of getting green(argb)
     int b = c & 0xFF;          // Faster way of getting blue(argb)
-    float multi=(r+g+b)/50;
+    float multi=(r+g+b);
     //println(multi);
     pos.x+=random(-2,2);
     pos.y+=random(-2,2);
     float dist = pos.dist(new PVector(width/2,height/2));
-    float size=10*multi*0.1*sin(radians(dist-5*frameCount));
+    float size=multi*0.01*sin(radians(dist-5*frameCount));
     polygon(pos.x, pos.y, size, 6);  
     
   }
