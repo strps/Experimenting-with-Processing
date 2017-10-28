@@ -11,15 +11,23 @@ import ddf.minim.*;
   float size = 10 ;
   
   PImage fade;
+  
+  int[] lightColor = new int[3];
 
 void setup(){
-  //size(800,800);
+  
   minim = new Minim(this);
-  in = minim.getLineIn(Minim.STEREO,512);
+  in = minim.getLineIn(Minim.STEREO,2048);
   fft= new FFT(in.bufferSize(), in.sampleRate());
   fft.logAverages(60,7);
+  lightColor[0]=0;
+  lightColor[0]=0;
+  lightColor[0]=0;
   
+  frameRate(24);
   fullScreen(P3D);
+  //size(1000,1000, P3D);
+  smooth(4);
   background(0);
   noStroke();
   rectMode(CENTER);
@@ -45,20 +53,19 @@ void draw(){
   
   
   translate(width/2,height/2,400);
-  //ambientLight(100,100,100,0,0,0);  
-  sphere(40);
-  pointLight(255, 255, 255, 0, 0, 0);
-  lightSpecular(255, 0, 0);
-  
   rotateZ(rot);
   rotateY(rot);
   rotateX(rot);
+  pushStyle();
+  fill(lightColor[0], lightColor[1] ,lightColor[2]);
+  sphere(40);
+  popStyle();
+  pointLight(lightColor[0],lightColor[1],lightColor[2], 0, 0, 0);
+  //ambientLight(lightColor[0],lightColor[1],lightColor[2]);
+  lightSpecular(255, 0, 0);
   for (bug i:bugArray){i.draw();}
+  
   rot += 0.015 + random(0, 0.02);
-  
- 
-  
-  
   if(keyPressed){
       switch (key){
       
@@ -72,7 +79,11 @@ void draw(){
       }
   }
   
-  
-  
-
+  //if ((frameCount % 3) == 0){
+    lightColor[0]=0;
+    lightColor[1]=0;
+    lightColor[2]=0;
+    lightColor[(frameCount/2) % 3]=255;
+  //}
+println(lightColor);
 }
