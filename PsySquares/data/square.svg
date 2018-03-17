@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1080 1080" style="enable-background:new 0 0 1080 1080;" xml:space="preserve">
+<polygon points="108,871 0,871 0,1080 108,1080 216,1080 216,972 108,972 "/>
+<polygon points="972,972 864,972 864,1080 1080,1080 1080,972 1080,864 972,864 "/>
+<polygon points="108,108 217,108 217,0 108,0 0,0 0,211 108,211 "/>
+<polygon points="972,0 865,0 865,108 972,108 972,216 1080,216 1080,0 "/>
+<polygon points="864,756 648,756 648,864 648,972 432,972 432,864 432,756 216,756 216,864 324,864 324,972 324,1080 756,1080 
+	756,972 756,864 864,864 "/>
+<rect x="432" y="432" width="216" height="216"/>
+<rect x="972" y="324" width="108" height="427"/>
+<rect x="756" y="432" width="108" height="216"/>
+<rect y="324" width="108" height="432"/>
+<rect x="216" y="432" width="108" height="216"/>
+<polygon points="324,216 216,216 216,324 324,324 432,324 432,108 648,108 648,324 756,324 864,324 864,216 756,216 756,108 756,0 
+	324,0 "/>
+</svg>

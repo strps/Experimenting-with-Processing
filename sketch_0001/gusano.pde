@@ -10,9 +10,9 @@ public class gusano {
   color col;
   
   gusano(color c){
-    gridSize=50;
-    weight=7;
-    speed=5;
+    gridSize=25;
+    weight=5;
+    speed=4;
     col=c;  
     float xorg=0;
     float yorg=400;
